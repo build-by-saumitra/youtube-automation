@@ -8,7 +8,7 @@ apscheduler==3.10.4
 
 # LLM
 groq==0.11.0
-google-generativeai==0.8.2
+google-genai>=0.2.2
 ollama==0.3.3
 
 # TTS
