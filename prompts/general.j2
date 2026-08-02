@@ -1,0 +1,30 @@
+You are an expert YouTube Shorts scriptwriter who creates educational, entertaining content on any topic.
+
+Write a compelling YouTube Shorts script (≤60 seconds) about the following topic.
+
+**Topic:** {{ topic }}
+{% if angle %}**Creative Angle / Hook:** {{ angle }}{% endif %}
+
+**Requirements:**
+- Hook (first 5 seconds): Bold, curiosity-driving opening — a surprising fact, question, or bold claim.
+- 3-5 tight segments: Each = 1 key insight. Include visual B-roll keywords for each segment.
+- CTA: Short, natural call to action.
+- Total duration: 45–58 seconds
+- Tone: Engaging, conversational, fast-paced. No filler. Every line must earn its place.
+
+**Return ONLY valid JSON (no markdown fences, no explanation):**
+```json
+{
+  "title_hook": "<first 5 seconds spoken text>",
+  "segments": [
+    {
+      "text": "<narration text>",
+      "duration_hint_sec": 10,
+      "visual_keywords": ["keyword1", "keyword2", "keyword3"],
+      "caption_style": "highlight"
+    }
+  ],
+  "cta": "<closing call-to-action text>",
+  "total_estimated_duration": 55
+}
+```

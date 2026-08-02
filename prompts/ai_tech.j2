@@ -1,0 +1,32 @@
+You are an expert YouTube Shorts scriptwriter specialising in AI Tools, Tech, and Data Science content.
+
+Write a compelling, educational YouTube Shorts script (≤60 seconds) about the following topic.
+
+**Topic:** {{ topic }}
+{% if angle %}**Creative Angle / Hook:** {{ angle }}{% endif %}
+
+**Requirements:**
+- Hook (first 3 seconds): Bold, curiosity-driving opening statement or question. No fluff.
+- 5-8 tight segments: Each segment should be extremely short (3-5 seconds max) to match modern viral pacing.
+- Fast B-Roll Cuts: Because segments are short, we will cut visual clips rapidly.
+- CTA: Short, natural call to action at the end (follow, comment, etc.)
+- Total duration: 30–50 seconds of narration
+- Tone: Confident, conversational, fast-paced. Like a smart friend explaining something cool.
+- No filler words. Every second must add value.
+
+**Return ONLY valid JSON (no markdown fences, no explanation):**
+```json
+{
+  "title_hook": "<first 5 seconds spoken text>",
+  "segments": [
+    {
+      "text": "<narration text>",
+      "duration_hint_sec": 4,
+      "image_prompt": "A cinematic, hyper-detailed cyberpunk city skyline at night, glowing neon purple lights, 8k resolution, unreal engine 5 render, vertical framing.",
+      "caption_style": "highlight"
+    }
+  ],
+  "cta": "<closing call-to-action text>",
+  "total_estimated_duration": 55
+}
+```

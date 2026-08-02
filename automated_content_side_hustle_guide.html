@@ -1,0 +1,349 @@
+
+<style>
+  .section { margin-bottom: 2rem; }
+  .section-title { font-size: 18px; font-weight: 500; color: var(--text-primary); margin: 0 0 1rem; }
+  .platform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .platform-card { background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; }
+  .platform-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .platform-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .platform-name { font-size: 15px; font-weight: 500; color: var(--text-primary); }
+  .platform-sub { font-size: 12px; color: var(--text-secondary); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin: 2px 2px 0 0; }
+  .tag-green { background: var(--bg-success); color: var(--text-success); }
+  .tag-amber { background: var(--bg-warning); color: var(--text-warning); }
+  .tag-blue { background: var(--bg-accent); color: var(--text-accent); }
+  .niche-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+  .niche-card { background: var(--surface-1); border: 0.5px solid var(--border); border-radius: 8px; padding: 10px 12px; }
+  .niche-name { font-size: 13px; font-weight: 500; color: var(--text-primary); margin-bottom: 4px; }
+  .niche-cpm { font-size: 12px; color: var(--text-accent); }
+  .niche-note { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+  .tool-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 0.5px solid var(--border); }
+  .tool-row:last-child { border-bottom: none; }
+  .tool-name { font-size: 13px; font-weight: 500; color: var(--text-primary); min-width: 110px; }
+  .tool-use { font-size: 12px; color: var(--text-secondary); flex: 1; }
+  .tool-price { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+  .money-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .money-card { background: var(--surface-1); border-radius: 8px; padding: 10px 12px; text-align: center; }
+  .money-label { font-size: 11px; color: var(--text-secondary); margin-bottom: 4px; }
+  .money-value { font-size: 16px; font-weight: 500; color: var(--text-primary); }
+  .money-note { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+  .timeline-row { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
+  .timeline-dot { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+  .dot-blue { background: var(--bg-accent); color: var(--text-accent); }
+  .dot-amber { background: var(--bg-warning); color: var(--text-warning); }
+  .dot-green { background: var(--bg-success); color: var(--text-success); }
+  .timeline-text { font-size: 13px; color: var(--text-primary); line-height: 1.6; }
+  .timeline-sub { font-size: 12px; color: var(--text-secondary); }
+  .warn-box { background: var(--bg-warning); border: 0.5px solid var(--border-warning); border-radius: 8px; padding: 10px 14px; font-size: 12px; color: var(--text-warning); margin-top: 12px; }
+  .tab-row { display: flex; gap: 6px; margin-bottom: 1rem; }
+  .tab { padding: 6px 14px; border-radius: var(--radius); font-size: 13px; border: 0.5px solid var(--border-strong); background: transparent; cursor: pointer; color: var(--text-secondary); }
+  .tab.active { background: var(--bg-accent); color: var(--text-accent); border-color: var(--border-accent); font-weight: 500; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .divider { height: 0.5px; background: var(--border); margin: 1.5rem 0; }
+</style>
+
+<h2 class="sr-only">Automated content channel guide — YouTube and Instagram side hustle breakdown</h2>
+
+<div style="padding: 1rem 0">
+
+  <div class="section">
+    <div class="tab-row">
+      <button class="tab active" onclick="switchTab('yt')">YouTube automation</button>
+      <button class="tab" onclick="switchTab('ig')">Instagram automation</button>
+      <button class="tab" onclick="switchTab('tools')">AI tools stack</button>
+      <button class="tab" onclick="switchTab('roadmap')">Your roadmap</button>
+    </div>
+
+    <!-- YouTube Tab -->
+    <div id="tab-yt" class="tab-content active">
+      <div class="section">
+        <p class="section-title">What is YouTube automation (faceless channels)?</p>
+        <div style="font-size:13px; color:var(--text-secondary); margin-bottom:1rem; line-height:1.7">
+          You run the channel like a media company CEO — AI and freelancers handle scripting, voiceovers, and editing. You never appear on camera. Top channels earn <strong style="color:var(--text-primary)">₹4L–₹80L/month</strong> in ad revenue alone.
+        </div>
+
+        <p style="font-size:14px; font-weight:500; color:var(--text-primary); margin:0 0 8px">Best niches (high CPM = more ₹ per 1000 views)</p>
+        <div class="niche-grid">
+          <div class="niche-card">
+            <div class="niche-name">Personal finance</div>
+            <div class="niche-cpm">$15–40 RPM</div>
+            <div class="niche-note">Best for Indians targeting global audience</div>
+          </div>
+          <div class="niche-card">
+            <div class="niche-name">AI tools & tech</div>
+            <div class="niche-cpm">$12–30 RPM</div>
+            <div class="niche-note">Perfect fit for your background</div>
+          </div>
+          <div class="niche-card">
+            <div class="niche-name">History docs</div>
+            <div class="niche-cpm">$10–20 RPM</div>
+            <div class="niche-note">Evergreen, easy to automate</div>
+          </div>
+          <div class="niche-card">
+            <div class="niche-name">Business cases</div>
+            <div class="niche-cpm">$12–25 RPM</div>
+            <div class="niche-note">Startup failures, billionaire stories</div>
+          </div>
+          <div class="niche-card">
+            <div class="niche-name">Health & wellness</div>
+            <div class="niche-cpm">$8–18 RPM</div>
+            <div class="niche-note">Huge search volume globally</div>
+          </div>
+          <div class="niche-card">
+            <div class="niche-name">Cricket & sports</div>
+            <div class="niche-cpm">$3–8 RPM</div>
+            <div class="niche-note">Lower CPM but massive Indian audience</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <p style="font-size:14px; font-weight:500; color:var(--text-primary); margin:0 0 10px">Realistic YouTube earnings</p>
+      <div class="money-grid">
+        <div class="money-card">
+          <div class="money-label">Month 1–6</div>
+          <div class="money-value">₹0</div>
+          <div class="money-note">Building, no monetization yet</div>
+        </div>
+        <div class="money-card">
+          <div class="money-label">Month 6–12</div>
+          <div class="money-value">₹5K–30K</div>
+          <div class="money-note">After hitting 1000 subs + 4K hrs</div>
+        </div>
+        <div class="money-card">
+          <div class="money-label">Year 2+</div>
+          <div class="money-value">₹50K–5L</div>
+          <div class="money-note">AdSense + affiliate + brand deals</div>
+        </div>
+      </div>
+
+      <div class="warn-box" style="margin-top:12px">
+        <i class="ti ti-alert-triangle" aria-hidden="true"></i> <strong>Key reality check:</strong> Lazy AI-only channels are being demonetized in 2026. YouTube's July 2026 policy targets "templates with little variation." Human editorial judgment + AI production = winning formula.
+      </div>
+
+      <div class="divider"></div>
+
+      <p style="font-size:14px; font-weight:500; color:var(--text-primary); margin:0 0 10px">How YouTube pays you</p>
+      <div class="platform-grid">
+        <div class="platform-card">
+          <div class="platform-header"><i class="ti ti-currency-dollar" style="font-size:20px; color:var(--text-accent)" aria-hidden="true"></i><div><div class="platform-name">AdSense (YPP)</div><div class="platform-sub">Needs 1K subs + 4K watch hours</div></div></div>
+          <div><span class="tag tag-green">Easiest to start</span></div>
+          <div style="font-size:12px; color:var(--text-secondary); margin-top:6px">Main income source. Finance/tech niches pay 5–10× more than entertainment.</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-header"><i class="ti ti-link" style="font-size:20px; color:var(--text-success)" aria-hidden="true"></i><div><div class="platform-name">Affiliate marketing</div><div class="platform-sub">Amazon, fintech apps, SaaS tools</div></div></div>
+          <div><span class="tag tag-green">No minimum required</span></div>
+          <div style="font-size:12px; color:var(--text-secondary); margin-top:6px">Add product links in description. Can earn from day 1, even before monetization.</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-header"><i class="ti ti-building-store" style="font-size:20px; color:var(--text-warning)" aria-hidden="true"></i><div><div class="platform-name">Brand sponsorships</div><div class="platform-sub">Paid to mention products in videos</div></div></div>
+          <div><span class="tag tag-amber">10K+ subs ideal</span></div>
+          <div style="font-size:12px; color:var(--text-secondary); margin-top:6px">$200–$5000 per video depending on niche and audience size.</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-header"><i class="ti ti-package" style="font-size:20px; color:var(--text-pro)" aria-hidden="true"></i><div><div class="platform-name">Digital products</div><div class="platform-sub">Courses, templates, ebooks</div></div></div>
+          <div><span class="tag tag-blue">Highest margin</span></div>
+          <div style="font-size:12px; color:var(--text-secondary); margin-top:6px">Sell a course or tool to your audience. 100% profit. Great for AI/tech niches.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram Tab -->
+    <div id="tab-ig" class="tab-content">
+      <div style="font-size:13px; color:var(--text-secondary); margin-bottom:1rem; line-height:1.7">
+        Instagram monetization in 2026 is <strong style="color:var(--text-primary)">not passive</strong> in the same way — it requires ongoing content. But with AI tools (batch filming + scheduling), you can maintain a presence with 4–6 hours/week.
+      </div>
+
+      <div class="warn-box" style="background:var(--bg-danger); border-color:var(--border-danger); color:var(--text-danger); margin-bottom:1rem">
+        <i class="ti ti-info-circle" aria-hidden="true"></i> <strong>Important:</strong> Instagram's Reels Play Bonus program was shut down globally in August 2025. There is no per-view payout pool anymore. Income now comes from the methods below.
+      </div>
+
+      <p style="font-size:14px; font-weight:500; color:var(--text-primary); margin:0 0 10px">How Instagram pays you in 2026</p>
+      <div class="platform-grid">
+        <div class="platform-card">
+          <div class="platform-header"><i class="ti ti-award" style="font-size:20px; color:var(--text-warning)" aria-hidden="true"></i><div><div class="platform-name">Sponsored posts</div><div class="platform-sub">Micro-influencer sweet spot</div></div></div>
+          <div><span class="tag tag-amber">10K–100K followers</span></div>
+          <div style="font-size:12px; color:var(--text-secondary); margin-top:6px">₹8K–₹40K per sponsored Reel. Brands pay for targeted, engaged audiences — not just big numbers.</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-header"><i class="ti ti-link" style="font-size:20px; color:var(--text-success)" aria-hidden="true"></i><div><div class="platform-name">Affiliate marketing</div><div class="platform-sub">Link in bio + DM automation</div></div></div>
+          <div><span class="tag tag-green">Start from day 1</span></div>
+          <div style="font-size:12px; color:var(--text-secondary); margin-top:6px">ManyChat automation: viewer comments "GUIDE" → auto-DM with your link. Converts 30% better than manual links.</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-header"><i class="ti ti-lock" style="font-size:20px; color:var(--text-pro)" aria-hidden="true"></i><div><div class="platform-name">Instagram subscriptions</div><div class="platform-sub">$0.99–$99.99/month</div></div></div>
+          <div><span class="tag tag-blue">0% Meta fees</span></div>
+          <div style="font-size:12px; color:var(--text-secondary); margin-top:6px">Exclusive content for paying fans. Meta currently takes 0% cut — all revenue goes to you.</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-header"><i class="ti ti-package" style="font-size:20px; color:var(--text-accent)" aria-hidden="true"></i><div><div class="platform-name">Digital products</div><div class="platform-sub">Templates, guides, mini-courses</div></div></div>
+          <div><span class="tag tag-blue">Best ROI</span></div>
+          <div style="font-size:12px; color:var(--text-secondary); margin-top:6px">Instagram as the top of your funnel. Drive traffic to Gumroad or your own store. Keep 100% revenue.</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <p style="font-size:14px; font-weight:500; color:var(--text-primary); margin:0 0 10px">Realistic Instagram earnings</p>
+      <div class="money-grid">
+        <div class="money-card">
+          <div class="money-label">1K–10K followers</div>
+          <div class="money-value">₹0–5K</div>
+          <div class="money-note">Affiliate only, building phase</div>
+        </div>
+        <div class="money-card">
+          <div class="money-label">10K–50K followers</div>
+          <div class="money-value">₹15K–60K</div>
+          <div class="money-note">Sponsors + affiliate + subs</div>
+        </div>
+        <div class="money-card">
+          <div class="money-label">50K–100K followers</div>
+          <div class="money-value">₹80K–3L</div>
+          <div class="money-note">All streams active</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools Tab -->
+    <div id="tab-tools" class="tab-content">
+      <p style="font-size:13px; color:var(--text-secondary); margin-bottom:1rem; line-height:1.7">Your complete AI production stack — from idea to uploaded video.</p>
+
+      <p style="font-size:14px; font-weight:500; color:var(--text-primary); margin:0 0 10px">YouTube automation stack</p>
+      <div style="background: var(--surface-1); border-radius: 8px; padding: 8px 14px; margin-bottom:1rem">
+        <div class="tool-row">
+          <div class="tool-name">ChatGPT / Claude</div>
+          <div class="tool-use">Script writing, topic research, SEO titles &amp; descriptions</div>
+          <div class="tool-price">Free–$20/mo</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">ElevenLabs</div>
+          <div class="tool-use">AI voiceover — most realistic, supports 30+ languages, voice cloning</div>
+          <div class="tool-price">Free–$5/mo</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">CapCut / Pictory</div>
+          <div class="tool-use">Script-to-video, auto-captions, stock footage, B-roll assembly</div>
+          <div class="tool-price">Free–$20/mo</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Canva / Midjourney</div>
+          <div class="tool-use">Thumbnail design — click-through rate is everything</div>
+          <div class="tool-price">Free–$10/mo</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">VidIQ / TubeBuddy</div>
+          <div class="tool-use">Keyword research, SEO score, competitor analysis</div>
+          <div class="tool-price">Free–$10/mo</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">YouTube Studio</div>
+          <div class="tool-use">Analytics, retention data, scheduling — use this religiously</div>
+          <div class="tool-price">Free</div>
+        </div>
+      </div>
+
+      <p style="font-size:14px; font-weight:500; color:var(--text-primary); margin:0 0 10px">Instagram automation stack</p>
+      <div style="background: var(--surface-1); border-radius: 8px; padding: 8px 14px; margin-bottom:1rem">
+        <div class="tool-row">
+          <div class="tool-name">CapCut / Virvid</div>
+          <div class="tool-use">Batch Reels creation — trending scripts, voiceovers, viral formats</div>
+          <div class="tool-price">Free–$15/mo</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Later / Buffer</div>
+          <div class="tool-use">Schedule 10–15 posts at once, auto-publish at peak times</div>
+          <div class="tool-price">$15–18/mo</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">ManyChat</div>
+          <div class="tool-use">DM automation — comment keyword triggers auto-DM with your link</div>
+          <div class="tool-price">Free–$15/mo</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Canva</div>
+          <div class="tool-use">Carousel posts, story templates, consistent visual branding</div>
+          <div class="tool-price">Free–$15/mo</div>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-success); border: 0.5px solid var(--border-success); border-radius: 8px; padding: 10px 14px; font-size: 12px; color: var(--text-success)">
+        <i class="ti ti-bulb" aria-hidden="true"></i> <strong>Saumitra's advantage:</strong> Your AI + data architecture background means you can build custom automation pipelines on top of these tools — a big edge over typical creators. Consider a niche around "AI tools for professionals" or "data-driven investing" for your channel.
+      </div>
+    </div>
+
+    <!-- Roadmap Tab -->
+    <div id="tab-roadmap" class="tab-content">
+      <p style="font-size:13px; color:var(--text-secondary); margin-bottom:1.25rem; line-height:1.7">
+        A practical 12-month roadmap treating this as a side hustle alongside your primary work.
+      </p>
+
+      <div class="timeline-row">
+        <div class="timeline-dot dot-blue">M1–2</div>
+        <div>
+          <div class="timeline-text" style="font-weight:500">Pick your niche and set up</div>
+          <div class="timeline-sub">Choose 1 channel (YouTube first — higher earning ceiling). Pick a niche: AI tools, finance, or data careers. Create accounts, set up CapCut + ElevenLabs + VidIQ. Goal: publish your first 5 videos.</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-dot dot-blue">M3–5</div>
+        <div>
+          <div class="timeline-text" style="font-weight:500">Consistent output — 2 videos/week</div>
+          <div class="timeline-sub">Test titles and thumbnails (they decide 80% of clicks). Add affiliate links from day 1. Study retention analytics — find where viewers drop off. Build a 30-video backlog before you expect traction.</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-dot dot-amber">M6</div>
+        <div>
+          <div class="timeline-text" style="font-weight:500">Hit YPP threshold → monetize</div>
+          <div class="timeline-sub">Target: 1000 subscribers + 4000 watch hours. Apply for YouTube Partner Program. First AdSense cheque usually small — focus on building. Start affiliate income now if not already.</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-dot dot-amber">M7–9</div>
+        <div>
+          <div class="timeline-text" style="font-weight:500">Add Instagram as a distribution channel</div>
+          <div class="timeline-sub">Repurpose YouTube Shorts clips as Instagram Reels. Use ManyChat for DM automation. Don't start Instagram from scratch — it's a YouTube amplifier at this stage.</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-dot dot-green">M10–12</div>
+        <div>
+          <div class="timeline-text" style="font-weight:500">Scale and diversify income</div>
+          <div class="timeline-sub">Launch a digital product (template pack, mini-course, prompt library). Pitch to 2–3 SaaS brands in your niche for sponsorships. Consider a second channel or outsource scripting on Fiverr/Upwork.</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <p style="font-size:14px; font-weight:500; color:var(--text-primary); margin:0 0 10px">Which platform should you start with?</p>
+      <div class="platform-grid">
+        <div class="platform-card" style="border: 2px solid var(--border-accent)">
+          <div style="background: var(--bg-accent); color: var(--text-accent); font-size: 11px; padding: 2px 8px; border-radius: 4px; display:inline-block; margin-bottom:8px; font-weight:500">Recommended first</div>
+          <div class="platform-name" style="margin-bottom:4px">YouTube</div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.6">Higher income ceiling, content is evergreen (videos earn for years), AdSense is the most reliable Indian creator income, and your IT/AI niche has massive CPM potential.</div>
+        </div>
+        <div class="platform-card">
+          <div style="background: var(--surface-0); color: var(--text-muted); font-size: 11px; padding: 2px 8px; border-radius: 4px; display:inline-block; margin-bottom:8px">Add later</div>
+          <div class="platform-name" style="margin-bottom:4px">Instagram</div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.6">Good for brand deals and affiliate, but requires continuous posting. Best used as a distribution channel after YouTube is established — repurpose Shorts as Reels.</div>
+        </div>
+      </div>
+
+      <div class="warn-box">
+        <i class="ti ti-clock" aria-hidden="true"></i> <strong>Time commitment reality:</strong> Plan for 8–12 hrs/week in months 1–6. After you've built templates and workflows, it drops to 4–6 hrs/week. Don't quit if traction is slow — 90% of channels that earn serious money took 9–18 months.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function switchTab(id) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
