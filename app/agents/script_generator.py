@@ -63,15 +63,14 @@ def _build_prompt(topic: str, angle: str, niche: str) -> str:
 # ── Groq API call ──────────────────────────────────────────────────────────────
 
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10))
-def _call_groq(prompt: str) -> str:
-    client = Groq(api_key=settings.groq_api_key)
-    response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.7,
-        max_tokens=2000,
+def _call_gemini(prompt: str) -> str:
+    from google import genai
+    client = genai.Client(api_key=settings.gemini_api_key)
+    response = client.models.generate_content(
+        model='gemini-2.5-flash',
+        contents=prompt,
     )
-    return response.choices[0].message.content
+    return response.text
 
 
 # ── Ollama fallback ────────────────────────────────────────────────────────────
@@ -143,14 +142,13 @@ def generate_script(topic: str, angle: str = "", niche: str | None = None) -> di
     logger.info(f"Generating script for: '{topic}' (niche={niche})")
 
     raw: str = ""
-    has_valid_groq_key = bool(settings.groq_api_key and not settings.groq_api_key.startswith("your_"))
-
-    if has_valid_groq_key:
+    has_valid_gemini_key = bool(settings.gemini_api_key and not settings.gemini_api_key.startswith("your_"))
+    if has_valid_gemini_key:
         try:
-            raw = _call_groq(prompt)
-            logger.info("Script generated via Groq")
+            raw = _call_gemini(prompt)
+            logger.info("Script generated via Gemini")
         except Exception as e:
-            logger.warning(f"Groq failed: {e} — trying Ollama fallback")
+            logger.warning(f"Gemini failed: {e} — trying Ollama fallback")
 
     if not raw:
         try:

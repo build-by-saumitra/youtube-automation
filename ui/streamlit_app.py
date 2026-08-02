@@ -20,7 +20,6 @@ import streamlit as st
 from streamlit.components.v1 import html as st_html
 
 API_BASE = os.getenv("API_BASE_URL", "http://localhost:8000")
-
 st.set_page_config(
     page_title="YT Automation Dashboard",
     page_icon="🎬",
