@@ -1,13 +1,3 @@
----
-title: YouTube Automation
-emoji: 🎬
-colorFrom: red
-colorTo: gray
-sdk: streamlit
-sdk_version: 1.38.0
-app_file: ui/streamlit_app.py
-pinned: false
----
 # 🎬 YouTube Automation Pipeline
 
 **Fully automated, end-to-end YouTube Shorts pipeline — $0/month to run.**

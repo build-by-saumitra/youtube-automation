@@ -18,20 +18,8 @@ from pathlib import Path
 import httpx
 import streamlit as st
 from streamlit.components.v1 import html as st_html
-import subprocess
-import socket
-import sys
 
-def is_port_in_use(port: int) -> bool:
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        return s.connect_ex(('127.0.0.1', port)) == 0
-
-if not is_port_in_use(8000):
-    print("Booting up FastAPI Backend...")
-    subprocess.Popen([sys.executable, "-m", "uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", "8000"])
-    time.sleep(3)
-
-API_BASE = os.getenv("API_BASE_URL", "http://127.0.0.1:8000")
+API_BASE = os.getenv("API_BASE_URL", "http://localhost:8000")
 st.set_page_config(
     page_title="YT Automation Dashboard",
     page_icon="🎬",
