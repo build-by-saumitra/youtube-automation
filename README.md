@@ -2,7 +2,7 @@
 title: YouTube Automation
 emoji: 🎬
 colorFrom: red
-colorTo: black
+colorTo: gray
 sdk: streamlit
 sdk_version: 1.38.0
 app_file: ui/streamlit_app.py
